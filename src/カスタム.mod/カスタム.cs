@@ -35,6 +35,15 @@ public static class カスタム
     {
         System.Diagnostics.Trace.WriteLine("on戦略画面大名ターン変更前");
         System.Diagnostics.Trace.WriteLine((int)arg["大名番号"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号"]);
+        return null;
+    }
+
+    public static 返値型 on戦略画面プレイヤー大名ターン変更前(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on戦略画面プレイヤー大名ターン変更前");
+        System.Diagnostics.Trace.WriteLine((int)arg["大名番号"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号"]);
         return null;
     }
 
@@ -65,14 +74,14 @@ public static class カスタム
     public static 返値型 on武将メッセージ要求時(引数型 arg)
     {
         System.Diagnostics.Trace.WriteLine("on武将メッセージ要求時");
-        System.Diagnostics.Trace.WriteLine(arg["武将番号１人目"]);
-        System.Diagnostics.Trace.WriteLine(arg["武将番号２人目"]);
-        System.Diagnostics.Trace.WriteLine(arg["武将番号３人目"]);
-        System.Diagnostics.Trace.WriteLine(arg["武将番号４人目"]);
-        System.Diagnostics.Trace.WriteLine(arg["メッセージ"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号１人目"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号２人目"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号３人目"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["武将番号４人目"]);
+        System.Diagnostics.Trace.WriteLine((String)arg["メッセージ"]);
         返値型 ret = new();
         // ret["メッセージ"] = "あいうえお";
-        return ret;
+        return null;
     }
 
     public static 返値型 on武将列伝要求時(引数型 arg)
@@ -82,7 +91,7 @@ public static class カスタム
         返値型 ret = new();
         ret["ラベル"] = "織田信長 ｱｲｳｴお";
         ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
-        return ret;
+        return null;
     }
 
     public static 返値型 on家宝列伝要求時(引数型 arg)
@@ -92,7 +101,7 @@ public static class カスタム
         返値型 ret = new();
         ret["ラベル"] = "家宝？ ﾖﾐｶﾞﾅ";
         ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
-        return ret;
+        return null;
     }
 
     public static 返値型 on家宝種類名要求時(引数型 arg)
@@ -101,7 +110,7 @@ public static class カスタム
 
         返値型 ret = new();
         ret["種類名"] = "ぴよ🎵よああ";
-        return ret;
+        return null;
     }
 
     public static 返値型 on武将行動済時(引数型 arg)
