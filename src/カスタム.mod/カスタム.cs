@@ -9,7 +9,7 @@ namespace 将星録;
 using 引数型 = System.Collections.Generic.Dictionary<string, object>;
 using 返値型 = System.Collections.Generic.Dictionary<string, object>;
 
-public static class カスタム
+public static partial class カスタム
 {
     public static 返値型 onメインウィンドウ生成後(引数型 arg)
     {
@@ -27,6 +27,7 @@ public static class カスタム
 
     public static 返値型 onメインゲーム開始時(引数型 arg)
     {
+        System.Diagnostics.Trace.WriteLine(arg["家宝番号"]);
         System.Diagnostics.Trace.WriteLine("onメインゲーム開始時");
         return null;
     }
@@ -106,7 +107,7 @@ public static class カスタム
 
     public static 返値型 on家宝種類名要求時(引数型 arg)
     {
-        System.Diagnostics.Trace.WriteLine(arg["家宝番号"]);
+        家宝情報配列[3].家宝名 = "あいう";
 
         返値型 ret = new();
         ret["種類名"] = "ぴよ🎵よああ";

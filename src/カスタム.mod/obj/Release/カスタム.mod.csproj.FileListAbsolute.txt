@@ -4,3 +4,8 @@ C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カ�
 C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.csproj.CoreCompileInputs.cache
 C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.dll
 C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.pdb
+C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\将星録.mod.dll
+C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\JavaScript.mod.dll
+C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\ClearScript.V8.dll
+C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\ClearScript.Core.dll
+C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.csproj.CopyComplete
