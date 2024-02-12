@@ -29,6 +29,8 @@ public static partial class カスタム {
         }
     }
 
+    public static 年月情報型 年月情報 = new();
+    public static 相場情報型 相場情報 = new();
     public static List<家宝情報型> 家宝情報配列 = new();
     public static List<官位情報型> 官位情報配列 = new();
     public static List<役職情報型> 役職情報配列 = new();

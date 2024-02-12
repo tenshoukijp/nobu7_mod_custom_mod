@@ -34,13 +34,19 @@ public static partial class カスタム
 
     public static 返値型 on相場要求時(引数型 arg)
     {
-        System.Diagnostics.Trace.WriteLine((int)arg["相場兵糧"]);
-        System.Diagnostics.Trace.WriteLine((int)arg["相場軍馬"]);
-        System.Diagnostics.Trace.WriteLine((int)arg["相場鉄砲"]);
+        System.Diagnostics.Trace.WriteLine("★年は" + 年月情報.年);
+        System.Diagnostics.Trace.WriteLine("★月は" + 年月情報.月);
+        
+        System.Diagnostics.Trace.WriteLine((int)arg["兵糧"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["軍馬"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["鉄砲"]);
         返値型 ret = new();
-        ret["相場兵糧"] = 30;
-        ret["相場軍馬"] = 40;
-        // ret["相場鉄砲"] = 60;
+        /*
+        ret["兵糧"] = 30;
+        ret["軍馬"] = 40;
+        // 相場情報.鉄砲 = 200;
+        ret["鉄砲"] = 198;
+        */
         return ret;
     }
 
