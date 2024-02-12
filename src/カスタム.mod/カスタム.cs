@@ -32,6 +32,18 @@ public static partial class カスタム
         return null;
     }
 
+    public static 返値型 on相場要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine((int)arg["相場兵糧"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["相場軍馬"]);
+        System.Diagnostics.Trace.WriteLine((int)arg["相場鉄砲"]);
+        返値型 ret = new();
+        ret["相場兵糧"] = 30;
+        ret["相場軍馬"] = 40;
+        // ret["相場鉄砲"] = 60;
+        return ret;
+    }
+
     public static 返値型 on戦略画面大名ターン変更前(引数型 arg)
     {
         System.Diagnostics.Trace.WriteLine("on戦略画面大名ターン変更前");
