@@ -73,22 +73,41 @@ public static partial class カスタム
         return null;
     }
 
-    public static 返値型 onフォント名要求時(引数型 arg)
+    public static 返値型 onフォント要求時(引数型 arg)
     {
-        System.Diagnostics.Trace.WriteLine("onフォント名要求時");
+        System.Diagnostics.Trace.WriteLine("onフォント要求時");
         返値型 ret = new();
         ret["フォント名"] = "ＭＳ ゴシック";
         return null;
     }
 
-    public static 返値型 onムービーファイル名要求時(引数型 arg)
+    public static 返値型 onムービーファイル要求時(引数型 arg)
     {
-        System.Diagnostics.Trace.WriteLine("onムービーファイル名要求時");
+        System.Diagnostics.Trace.WriteLine("onムービーファイル要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
         返値型 ret = new();
         ret["ファイル名"] = @"OVERRIDE\MOVIE\CHRIST.AVI";
         return ret;
     }
+
+    public static 返値型 on音楽要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on音楽要求時");
+        System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
+        返値型 ret = new();
+        ret["ファイル名"] = @"BGM\02.WAV";
+        return ret;
+    }
+
+    public static 返値型 on効果音要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on音楽要求時");
+        System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
+        返値型 ret = new();
+        ret["ファイル名"] = @"Taiko.wav";
+        return ret;
+    }
+
 
     public static 返値型 on武将メッセージ要求時(引数型 arg)
     {
