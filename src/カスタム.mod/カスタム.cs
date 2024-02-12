@@ -81,7 +81,16 @@ public static partial class カスタム
         return null;
     }
 
-    public static 返値型 onムービーファイル要求時(引数型 arg)
+    public static 返値型 onファイル要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("onファイル要求時");
+        System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
+        返値型 ret = new();
+        ret["ファイル名"] = @"OVERRIDE\CHR\CHRIST.BMP";
+        return ret;
+    }
+
+    public static 返値型 onムービー要求時(引数型 arg)
     {
         System.Diagnostics.Trace.WriteLine("onムービーファイル要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
