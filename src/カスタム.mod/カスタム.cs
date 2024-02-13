@@ -83,11 +83,14 @@ public static partial class カスタム
 
     public static 返値型 onファイル要求時(引数型 arg)
     {
+        /*
         System.Diagnostics.Trace.WriteLine("onファイル要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
         返値型 ret = new();
-        ret["ファイル名"] = @"OVERRIDE\CHR\CHRIST.BMP";
+        ret["ファイル名"] = @"OVERRIDE\あいうえお.dat";
         return ret;
+        */
+        return null;
     }
 
     public static 返値型 onムービー要求時(引数型 arg)
@@ -168,5 +171,32 @@ public static partial class カスタム
         ret["行動済"] = 0;
         return null;
     }
+
+    public static 返値型 on野戦開始時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on野戦開始時");
+        System.Diagnostics.Trace.WriteLine("攻武" + arg["攻撃武将番号"]);
+        System.Diagnostics.Trace.WriteLine("攻ユ" + arg["攻撃ユニット番号"]);
+        System.Diagnostics.Trace.WriteLine("防武" + arg["防御武将番号"]);
+        System.Diagnostics.Trace.WriteLine("防ユ" + arg["防御ユニット番号"]);
+        return null;
+    }
+    public static 返値型 on野戦残りターン変更時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on野戦開始時");
+        System.Diagnostics.Trace.WriteLine("攻武" + arg["攻撃武将番号"]);
+        System.Diagnostics.Trace.WriteLine("攻ユ" + arg["攻撃ユニット番号"]);
+        System.Diagnostics.Trace.WriteLine("防武" + arg["防御武将番号"]);
+        System.Diagnostics.Trace.WriteLine("防ユ" + arg["防御ユニット番号"]);
+        System.Diagnostics.Trace.WriteLine("残りターン" + arg["残りターン"]);
+        return null;
+    }
+
+    public static 返値型 on野戦終了時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on野戦終了時");
+        return null;
+    }
+
 }
 
