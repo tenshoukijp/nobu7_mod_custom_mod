@@ -183,7 +183,7 @@ public static partial class カスタム
     }
     public static 返値型 on野戦残りターン変更時(引数型 arg)
     {
-        System.Diagnostics.Trace.WriteLine("on野戦開始時");
+        System.Diagnostics.Trace.WriteLine("on野戦残りターン変更時");
         System.Diagnostics.Trace.WriteLine("攻武" + arg["攻撃武将番号"]);
         System.Diagnostics.Trace.WriteLine("攻ユ" + arg["攻撃ユニット番号"]);
         System.Diagnostics.Trace.WriteLine("防武" + arg["防御武将番号"]);
