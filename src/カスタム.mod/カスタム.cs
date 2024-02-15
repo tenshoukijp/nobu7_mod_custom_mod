@@ -18,6 +18,28 @@ public static partial class カスタム
         System.Diagnostics.Trace.WriteLine(ハンドル);
         return null;
     }
+    private static int 項目番号その１ = 0;
+    private static int 項目番号その２ = 0;
+    public static 返値型 onメニュー追加要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("onメニュー追加要求時");
+        項目番号その１ = アプリケーション.メニュー.項目追加("私のカスタムメニュー (&W)");
+        項目番号その２ = アプリケーション.メニュー.項目追加("私のカスタムメニュー２");
+
+        return null;
+    }
+
+    public static 返値型 onメニュー項目実行時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("onメニュー項目実行時");
+        System.Diagnostics.Trace.WriteLine(arg["項目番号"]);
+        int 押された項目番号 = (int)arg["項目番号"];
+        if (項目番号その１ == 押された項目番号)
+        {
+            System.Diagnostics.Trace.WriteLine("私のカスタムメニューが押されました");
+        }
+        return null;
+    }
 
     public static 返値型 on初期設定画面時(引数型 arg)
     {
