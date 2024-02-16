@@ -176,6 +176,18 @@ public static partial class カスタム
         return null;
     }
 
+    public static 返値型 on城列伝要求時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine(arg["城番号"]);
+
+        返値型 ret = new();
+        ret["ラベル"] = "城？ ﾖﾐｶﾞﾅ";
+        ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
+        return null;
+    }
+
+    
+
     public static 返値型 on家宝種類名要求時(引数型 arg)
     {
         家宝情報配列[3].家宝名 = "あいう";
