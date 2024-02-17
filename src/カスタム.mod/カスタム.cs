@@ -25,6 +25,7 @@ public static partial class カスタム
         System.Diagnostics.Trace.WriteLine("onメニュー追加要求時");
         項目番号その１ = アプリケーション.メニュー.項目追加("私のカスタムメニュー (&W)");
         項目番号その２ = アプリケーション.メニュー.項目追加("私のカスタムメニュー２");
+        _ = アプリケーション.メニュー.項目追加("---");
 
         return null;
     }
