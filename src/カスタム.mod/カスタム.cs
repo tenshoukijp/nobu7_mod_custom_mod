@@ -32,6 +32,7 @@ public static partial class カスタム
 
     public static 返値型 onメニュー項目実行時(引数型 arg)
     {
+        家宝情報配列.Count();
         System.Diagnostics.Trace.WriteLine("onメニュー項目実行時");
         System.Diagnostics.Trace.WriteLine(arg["項目番号"]);
         int 押された項目番号 = (int)arg["項目番号"];
@@ -50,6 +51,9 @@ public static partial class カスタム
 
     public static 返値型 onメインゲーム開始時(引数型 arg)
     {
+        int a = 将星録.列挙.家宝.配列.一重切園城寺;
+
+        List<官位情報型> o = new();
         System.Diagnostics.Trace.WriteLine(arg["家宝番号"]);
         System.Diagnostics.Trace.WriteLine("onメインゲーム開始時");
         return null;
@@ -227,9 +231,25 @@ public static partial class カスタム
         return null;
     }
 
+    public static 返値型 on野戦部隊行動前(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on野戦部隊行動時");
+        System.Diagnostics.Trace.WriteLine("残りターン" + arg["残りターン"]);
+        System.Diagnostics.Trace.WriteLine("攻撃武将番号" + arg["攻撃武将番号"]);
+        System.Diagnostics.Trace.WriteLine("攻撃部隊番号" + arg["攻撃部隊番号"]);
+        System.Diagnostics.Trace.WriteLine("防御武将番号" + arg["防御武将番号"]);
+        return null;
+    }
+
     public static 返値型 on野戦終了時(引数型 arg)
     {
         System.Diagnostics.Trace.WriteLine("on野戦終了時");
+        return null;
+    }
+
+    public static 返値型 on籠城戦終了時(引数型 arg)
+    {
+        System.Diagnostics.Trace.WriteLine("on籠城戦終了時");
         return null;
     }
 
