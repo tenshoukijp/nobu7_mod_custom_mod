@@ -26,7 +26,6 @@ public static partial class カスタム
         項目番号その１ = アプリケーション.メニュー.項目追加("私のカスタムメニュー (&W)");
         項目番号その２ = アプリケーション.メニュー.項目追加("私のカスタムメニュー２");
         _ = アプリケーション.メニュー.項目追加("---");
-
         return null;
     }
 
@@ -74,7 +73,7 @@ public static partial class カスタム
         // 相場情報.鉄砲 = 200;
         ret["鉄砲"] = 198;
         */
-        return ret;
+        return null;
     }
 
     public static 返値型 on戦略画面大名ターン変更前(引数型 arg)
@@ -126,7 +125,7 @@ public static partial class カスタム
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
         返値型 ret = new();
         ret["ファイル名"] = @"OVERRIDE\MOVIE\CHRIST.AVI";
-        return ret;
+        return null;
     }
 
     public static 返値型 on音楽要求時(引数型 arg)
@@ -135,7 +134,7 @@ public static partial class カスタム
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
         返値型 ret = new();
         ret["ファイル名"] = @"BGM\02.WAV";
-        return ret;
+        return null;
     }
 
     public static 返値型 on効果音要求時(引数型 arg)
@@ -144,19 +143,28 @@ public static partial class カスタム
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
         返値型 ret = new();
         ret["ファイル名"] = @"Taiko.wav";
-        return ret;
+        return null;
     }
 
 
     public static 返値型 on武将メッセージ要求時(引数型 arg)
     {
         System.Diagnostics.Trace.WriteLine("on武将メッセージ要求時");
+        int s1st = (int)arg["武将番号１人目"];
+        if (s1st == 148)
+        {
+            string msg = (string)arg["メッセージ"];
+            返値型 ret = new();
+            ret["メッセージ"] = "あいうえお";
+            return null;
+        }
+
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号１人目"]);
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号２人目"]);
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号３人目"]);
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号４人目"]);
         System.Diagnostics.Trace.WriteLine((String)arg["メッセージ"]);
-        返値型 ret = new();
+        //返値型 ret = new();
         // ret["メッセージ"] = "あいうえお";
         return null;
     }
