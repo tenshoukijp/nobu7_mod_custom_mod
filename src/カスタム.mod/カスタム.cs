@@ -64,6 +64,7 @@ public static partial class カスタム
         ret["軍馬"] = 40;
         // 相場情報.鉄砲 = 200;
         ret["鉄砲"] = 198;
+        大名関係情報.同盟残[20, 30] = 20;
     }
 
     public static void on戦略画面大名ターン変更前(引数型 arg, 返値型 ret)
@@ -89,7 +90,7 @@ public static partial class カスタム
     public static void onフォント要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine("onフォント要求時");
-        ret["フォント名"] = "ＭＳ ゴシック";
+        // ret["フォント名"] = "ＭＳ ゴシック";
     }
 
     public static void onファイル要求時(引数型 arg, 返値型 ret)
@@ -106,34 +107,27 @@ public static partial class カスタム
     {
         System.Diagnostics.Trace.WriteLine("onムービーファイル要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
-        ret["ファイル名"] = @"OVERRIDE\MOVIE\CHRIST.AVI";
+        // ret["ファイル名"] = @"OVERRIDE\MOVIE\CHRIST.AVI";
     }
 
     public static void on音楽要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine("on音楽要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
-        ret["ファイル名"] = @"BGM\02.WAV";
+        // ret["ファイル名"] = @"BGM\02.WAV";
     }
 
     public static void on効果音要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine("on音楽要求時");
         System.Diagnostics.Trace.WriteLine("元ファイル名" + arg["ファイル名"]);
-        ret["ファイル名"] = @"Taiko.wav";
+        // ret["ファイル名"] = @"Taiko.wav";
     }
 
 
     public static void on武将メッセージ要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine("on武将メッセージ要求時");
-        int s1st = (int)arg["武将番号１人目"];
-        if (s1st == 148)
-        {
-            string msg = (string)arg["メッセージ"];
-            ret["メッセージ"] = "あいうえお";
-        }
-
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号１人目"]);
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号２人目"]);
         System.Diagnostics.Trace.WriteLine((int)arg["武将番号３人目"]);
@@ -146,40 +140,40 @@ public static partial class カスタム
     {
         System.Diagnostics.Trace.WriteLine(arg["武将番号"]);
 
-        ret["ラベル"] = "織田信長 ｱｲｳｴお";
-        ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
+        // ret["ラベル"] = "織田信長 ｱｲｳｴお";
+        // ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
     }
 
     public static void on家宝列伝要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine(arg["家宝番号"]);
 
-        ret["ラベル"] = "家宝？ ﾖﾐｶﾞﾅ";
-        ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
+        //  ret["ラベル"] = "家宝？ ﾖﾐｶﾞﾅ";
+        // ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
     }
 
     public static void on城列伝要求時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine(arg["城番号"]);
 
-        ret["ラベル"] = "城？ ﾖﾐｶﾞﾅ";
-        ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
+        // ret["ラベル"] = "城？ ﾖﾐｶﾞﾅ";
+        // ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
     }
 
-    
+
 
     public static void on家宝種類名要求時(引数型 arg, 返値型 ret)
     {
         家宝情報配列[3].家宝名 = "あいう";
 
-        ret["種類名"] = "ぴよ🎵よああ";
+        // ret["種類名"] = "ぴよ🎵よああ";
     }
 
     public static void on武将行動済時(引数型 arg, 返値型 ret)
     {
         System.Diagnostics.Trace.WriteLine("on武将行動済時");
         System.Diagnostics.Trace.WriteLine(arg["武将番号"]);
-        ret["行動済"] = 0;
+        // ret["行動済"] = 0;
     }
 
     public static void on野戦開始時(引数型 arg, 返値型 ret)

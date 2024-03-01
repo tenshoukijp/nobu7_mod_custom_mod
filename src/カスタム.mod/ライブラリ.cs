@@ -67,7 +67,9 @@ public static partial class カスタム {
     public static ReadOnlyCollection<官位情報型> 官位情報配列;
     public static ReadOnlyCollection<役職情報型> 役職情報配列;
 
-    static class 野戦
+    public static 大名関係情報型 大名関係情報 = new();
+
+    public static class 野戦
     {
         public static 将星録.野戦.ターン情報型 ターン情報 = new();
         public static ReadOnlyCollection<将星録.野戦.攻撃部隊情報型> 攻撃部隊情報;
