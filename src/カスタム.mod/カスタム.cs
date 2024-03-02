@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using 将星録.最大数;
 
 namespace 将星録;
 
@@ -54,6 +55,7 @@ public static partial class カスタム
 
     public static void on相場要求時(引数型 arg, 返値型 ret)
     {
+        大名情報配列[3].プレイヤ担当 = 1;
         System.Diagnostics.Trace.WriteLine("★年は" + 年月情報.年);
         System.Diagnostics.Trace.WriteLine("★月は" + 年月情報.月);
         

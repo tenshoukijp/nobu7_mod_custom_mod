@@ -15,6 +15,13 @@ public static partial class カスタム {
     // 静的コンストラクタ
     static カスタム()
     {
+        List<大名情報型> _大名情報型 = new();
+        for (int ix = 0; ix < 将星録.最大数.大名情報.配列数; ix++)
+        {
+            _大名情報型.Add(new 大名情報型(ix));
+        }
+        大名情報配列 = _大名情報型.AsReadOnly(); // 要素の追加や削除は認めない
+
         List<城情報型> _城情報型 = new();
         for (int ix = 0; ix < 将星録.最大数.城情報.配列数; ix++)
         {
@@ -62,6 +69,7 @@ public static partial class カスタム {
     public static 年月情報型 年月情報 = new();
     public static 相場情報型 相場情報 = new();
 
+    public static ReadOnlyCollection<大名情報型> 大名情報配列;
     public static ReadOnlyCollection<城情報型> 城情報配列;
     public static ReadOnlyCollection<家宝情報型> 家宝情報配列;
     public static ReadOnlyCollection<官位情報型> 官位情報配列;
