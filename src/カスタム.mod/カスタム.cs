@@ -55,18 +55,16 @@ public static partial class カスタム
 
     public static void on相場要求時(引数型 arg, 返値型 ret)
     {
-        大名情報配列[3].プレイヤ担当 = 1;
         System.Diagnostics.Trace.WriteLine("★年は" + 年月情報.年);
         System.Diagnostics.Trace.WriteLine("★月は" + 年月情報.月);
         
         System.Diagnostics.Trace.WriteLine((int)arg["兵糧"]);
         System.Diagnostics.Trace.WriteLine((int)arg["軍馬"]);
         System.Diagnostics.Trace.WriteLine((int)arg["鉄砲"]);
-        ret["兵糧"] = 30;
-        ret["軍馬"] = 40;
+        // ret["兵糧"] = 30;
+        // ret["軍馬"] = 40;
         // 相場情報.鉄砲 = 200;
-        ret["鉄砲"] = 198;
-        大名関係情報.同盟残[20, 30] = 20;
+        // ret["鉄砲"] = 198;
     }
 
     public static void on戦略画面大名ターン変更前(引数型 arg, 返値型 ret)
