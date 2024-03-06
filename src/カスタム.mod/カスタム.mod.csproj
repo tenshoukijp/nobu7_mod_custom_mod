@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -48,7 +48,8 @@
   <ItemGroup>
     <Compile Include="カスタム.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ライブラリ.cs" />
+    <Compile Include="ライブラリ\デバッグ.cs" />
+    <Compile Include="ライブラリ\オブジェクト.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
