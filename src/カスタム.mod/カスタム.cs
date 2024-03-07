@@ -49,7 +49,6 @@ public static partial class カスタム
     {
         int a = 将星録.列挙.家宝.配列.一重切園城寺;
 
-        デバッグ出力(arg["家宝番号"]);
         デバッグ出力("onメインゲーム開始時");
     }
 
@@ -123,6 +122,21 @@ public static partial class カスタム
         デバッグ出力("元ファイル名" + arg["ファイル名"]);
         // ret["ファイル名"] = @"Taiko.wav";
     }
+
+    public static void on家宝画像要求時(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on家宝画像要求時");
+        デバッグ出力("元ファイル名" + arg["家宝番号"]);
+        // ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\ITEMDATA\ΚΗΘΛΙΜ.bmp";
+    }
+
+    public static void on顔画像要求時(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on顔画像要求時");
+        デバッグ出力("元ファイル名" + arg["顔番号"]);
+        // ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\KAODATA\0000_B.bmp";
+    }
+
 
 
     public static void on武将メッセージ要求時(引数型 arg, 返値型 ret)
