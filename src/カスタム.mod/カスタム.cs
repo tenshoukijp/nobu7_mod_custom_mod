@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿global using System;
+global using System.Collections.Generic;
+global using System.IO;
+global using System.Windows.Forms;
+global using System.Text;
+global using System.Text.RegularExpressions;
+
+global using 将星録;
+
+global using 引数型 = System.Collections.Generic.IReadOnlyDictionary<string, object>;
+global using 返値型 = System.Collections.Generic.IDictionary<string, object>;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using 将星録.最大数;
 
 namespace 将星録;
 
-using 引数型 = System.Collections.Generic.IReadOnlyDictionary<string, object>;
-using 返値型 = System.Collections.Generic.IDictionary<string, object>;
 
 public static partial class カスタム
 {
@@ -30,7 +34,7 @@ public static partial class カスタム
 
     public static void onメニュー項目実行時(引数型 arg, 返値型 ret)
     {
-        家宝情報配列.Count();
+        var b = 家宝情報配列.Count;
         デバッグ出力("onメニュー項目実行時");
         デバッグ出力(arg["項目番号"]);
         int 押された項目番号 = (int)arg["項目番号"];
@@ -71,6 +75,15 @@ public static partial class カスタム
         デバッグ出力("on戦略画面大名ターン変更前");
         デバッグ出力((int)arg["大名番号"]);
         デバッグ出力((int)arg["武将番号"]);
+        int iDIX = (int)arg["大名番号"];
+        if (0 <= iDIX && iDIX < 大名情報配列.Count)
+        {
+            int iBIX = 大名情報配列[iDIX].大名武将配列IX;
+            if (0 <= iBIX && iBIX < 武将情報配列.Count)
+            {
+                デバッグ出力("武将名" + 武将情報配列[iBIX].姓名);
+            }
+        }
     }
 
     public static void on戦略画面プレイヤー大名ターン変更前(引数型 arg, 返値型 ret)
@@ -174,8 +187,6 @@ public static partial class カスタム
         // ret["詳細"] = "あいうえお\nあいうえお\nあいうえお\nあいうえお\n";
     }
 
-
-
     public static void on家宝種類名要求時(引数型 arg, 返値型 ret)
     {
         家宝情報配列[3].家宝名 = "あいう";
@@ -198,6 +209,7 @@ public static partial class カスタム
         デバッグ出力("防武" + arg["防御武将番号"]);
         デバッグ出力("防ユ" + arg["防御ユニット番号"]);
     }
+
     public static void on野戦残りターン変更時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on野戦残りターン変更時");

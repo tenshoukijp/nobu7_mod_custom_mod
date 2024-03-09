@@ -24,6 +24,20 @@ public static partial class カスタム {
         }
         城情報配列 = _城情報型.AsReadOnly(); // 要素の追加や削除は認めない
 
+        List<武将情報型> _武将情報配列 = new();
+        for (int ix = 0; ix < 将星録.最大数.武将情報.総配列数; ix++)
+        {
+            _武将情報配列.Add(new 武将情報型(ix));
+        }
+        武将情報配列 = _武将情報配列.AsReadOnly(); // 要素の追加や削除は認めない
+
+        List<ユニット情報型> _ユニット情報型 = new();
+        for (int ix = 0; ix < 将星録.最大数.ユニット情報.配列数; ix++)
+        {
+            _ユニット情報型.Add(new ユニット情報型(ix));
+        }
+        ユニット情報配列 = _ユニット情報型.AsReadOnly(); // 要素の追加や削除は認めない
+
         List<家宝情報型> _家宝情報配列 = new();
         for (int ix = 0; ix < 将星録.最大数.家宝情報.配列数; ix++)
         {
@@ -66,6 +80,8 @@ public static partial class カスタム {
 
     public static ReadOnlyCollection<大名情報型> 大名情報配列;
     public static ReadOnlyCollection<城情報型> 城情報配列;
+    public static ReadOnlyCollection<武将情報型> 武将情報配列;
+    public static ReadOnlyCollection<ユニット情報型> ユニット情報配列;
     public static ReadOnlyCollection<家宝情報型> 家宝情報配列;
     public static ReadOnlyCollection<官位情報型> 官位情報配列;
     public static ReadOnlyCollection<役職情報型> 役職情報配列;
