@@ -163,6 +163,12 @@ public static partial class カスタム
         // ret["メッセージ"] = "あいうえお";
     }
 
+    public static void onテキスト描画時(引数型 arg, 返値型 ret)
+    {
+        // デバッグ出力("onテキスト描画時");
+        // デバッグ出力(arg["テキスト"]);
+    }
+
     public static void on武将列伝要求時(引数型 arg, 返値型 ret)
     {
         デバッグ出力(arg["武将番号"]);
