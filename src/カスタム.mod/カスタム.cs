@@ -240,6 +240,24 @@ public static partial class カスタム
         デバッグ出力("on野戦終了時");
     }
 
+    public static void on籠城戦開始時(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on籠城戦開始時");
+        デバッグ出力("城" + arg["城番号"]);
+        int iCastleID = (int)arg["城番号"];
+        デバッグ出力("城名" + 城情報配列[iCastleID].城名);
+
+        デバッグ出力("攻大" + arg["攻撃大名番号"]);
+        int iAttackDaimyoID = (int)arg["攻撃大名番号"];
+        int iAttackDaimyoBushouID = 大名情報配列[iAttackDaimyoID].大名武将配列IX;
+        デバッグ出力("攻撃大名名" + 武将情報配列[iAttackDaimyoBushouID].姓名);
+
+        デバッグ出力("防大" + arg["防御大名番号"]);
+        int iDefentDaimyoID = (int)arg["防御大名番号"];
+        int iDefendDaimyoBushouID = 大名情報配列[iDefentDaimyoID].大名武将配列IX;
+        デバッグ出力("防御大名名" + 武将情報配列[iDefendDaimyoBushouID].姓名);
+    }
+
     public static void on籠城戦終了時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on籠城戦終了時");
