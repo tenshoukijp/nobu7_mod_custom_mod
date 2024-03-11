@@ -219,10 +219,6 @@ public static partial class カスタム
     public static void on野戦残りターン変更時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on野戦残りターン変更時");
-        デバッグ出力("攻武" + arg["攻撃武将番号"]);
-        デバッグ出力("攻ユ" + arg["攻撃ユニット番号"]);
-        デバッグ出力("防武" + arg["防御武将番号"]);
-        デバッグ出力("防ユ" + arg["防御ユニット番号"]);
         デバッグ出力("残りターン" + arg["残りターン"]);
     }
 
@@ -256,6 +252,12 @@ public static partial class カスタム
         int iDefentDaimyoID = (int)arg["防御大名番号"];
         int iDefendDaimyoBushouID = 大名情報配列[iDefentDaimyoID].大名武将配列IX;
         デバッグ出力("防御大名名" + 武将情報配列[iDefendDaimyoBushouID].姓名);
+    }
+
+    public static void on籠城戦残りターン変更時(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on野戦残りターン変更時");
+        デバッグ出力("残りターン" + arg["残りターン"]);
     }
 
     public static void on籠城戦終了時(引数型 arg, 返値型 ret)
