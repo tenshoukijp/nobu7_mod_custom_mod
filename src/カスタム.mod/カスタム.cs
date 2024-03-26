@@ -151,6 +151,12 @@ public static partial class カスタム
         // ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\KAODATA\0000_B.bmp";
     }
 
+    public static void on家紋画像要求時(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on家紋画像要求時");
+        デバッグ出力("家紋番号" + arg["家紋番号"]);
+        ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\KAMON\my001.bmp";
+    }
 
 
     public static void on武将メッセージ要求時(引数型 arg, 返値型 ret)
@@ -273,7 +279,7 @@ public static partial class カスタム
         デバッグ出力("残りターン" + arg["残りターン"]);
     }
 
-    public static void on籠城戦ダメージ決定前(引数型 arg, 返値型 ret)
+    public static void on籠城戦ダメージ決定時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on籠城戦ダメージ決定前");
         デバッグ出力(arg["門防御度"]);
