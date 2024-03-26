@@ -59,19 +59,33 @@ public static partial class カスタム {
         }
         役職情報配列 = _役職情報型.AsReadOnly(); // 要素の追加や削除は認めない
 
-        List<将星録.野戦.攻撃部隊情報型> _攻撃部隊情報 = new();
+        List<将星録.野戦.攻撃部隊情報型> _野戦攻撃部隊情報 = new();
         for (int ix = 0; ix < 将星録.最大数.ユニット情報.軍勢部隊数; ix++)
         {
-            _攻撃部隊情報.Add(new 将星録.野戦.攻撃部隊情報型(ix));
+            _野戦攻撃部隊情報.Add(new 将星録.野戦.攻撃部隊情報型(ix));
         }
-        野戦.攻撃部隊情報 = _攻撃部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
+        野戦.攻撃部隊情報 = _野戦攻撃部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
 
-        List<将星録.野戦.防御部隊情報型> _防御部隊情報 = new();
+        List<将星録.野戦.防御部隊情報型> _野戦防御部隊情報 = new();
         for (int ix = 0; ix < 将星録.最大数.ユニット情報.軍勢部隊数; ix++)
         {
-            _防御部隊情報.Add(new 将星録.野戦.防御部隊情報型(ix));
+            _野戦防御部隊情報.Add(new 将星録.野戦.防御部隊情報型(ix));
         }
-        野戦.防御部隊情報 = _防御部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
+        野戦.防御部隊情報 = _野戦防御部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
+
+        List<将星録.籠城戦.攻撃部隊情報型> _籠城戦攻撃部隊情報 = new();
+        for (int ix = 0; ix < 将星録.最大数.籠城戦.攻撃部隊情報.配列数; ix++)
+        {
+            _籠城戦攻撃部隊情報.Add(new 将星録.籠城戦.攻撃部隊情報型(ix));
+        }
+        籠城戦.攻撃部隊情報 = _籠城戦攻撃部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
+
+        List<将星録.籠城戦.防御部隊情報型> _籠城戦防御部隊情報 = new();
+        for (int ix = 0; ix < 将星録.最大数.籠城戦.防御部隊情報.配列数; ix++)
+        {
+            _籠城戦防御部隊情報.Add(new 将星録.籠城戦.防御部隊情報型(ix));
+        }
+        籠城戦.防御部隊情報 = _籠城戦防御部隊情報.AsReadOnly(); // 要素の追加や削除は認めない
 
     }
 
@@ -93,6 +107,12 @@ public static partial class カスタム {
         public static 将星録.野戦.ターン情報型 ターン情報 = new();
         public static ReadOnlyCollection<将星録.野戦.攻撃部隊情報型> 攻撃部隊情報;
         public static ReadOnlyCollection<将星録.野戦.防御部隊情報型> 防御部隊情報;
+    }
+    public static class 籠城戦
+    {
+        public static 将星録.野戦.ターン情報型 ターン情報 = new();
+        public static ReadOnlyCollection<将星録.籠城戦.攻撃部隊情報型> 攻撃部隊情報;
+        public static ReadOnlyCollection<将星録.籠城戦.防御部隊情報型> 防御部隊情報;
     }
 
 }

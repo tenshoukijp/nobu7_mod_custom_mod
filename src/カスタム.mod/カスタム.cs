@@ -133,20 +133,21 @@ public static partial class カスタム
     {
         デバッグ出力("on音楽要求時");
         デバッグ出力("元ファイル名" + arg["ファイル名"]);
+
         // ret["ファイル名"] = @"Taiko.wav";
     }
 
     public static void on家宝画像要求時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on家宝画像要求時");
-        デバッグ出力("元ファイル名" + arg["家宝番号"]);
+        デバッグ出力("家宝番号" + arg["家宝番号"]);
         // ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\ITEMDATA\ΚΗΘΛΙΜ.bmp";
     }
 
     public static void on顔画像要求時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on顔画像要求時");
-        デバッグ出力("元ファイル名" + arg["顔番号"]);
+        デバッグ出力("顔番号" + arg["顔番号"]);
         // ret["ファイル名"] = @"C:\usr\steam\steamapps\common\Nobunaga7WPK\OVERRIDE\KAODATA\0000_B.bmp";
     }
 
@@ -260,6 +261,25 @@ public static partial class カスタム
         デバッグ出力("残りターン" + arg["残りターン"]);
     }
 
+    public static void on籠城戦攻撃部隊更新後(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on籠城戦攻撃部隊更新後");
+        デバッグ出力("残りターン" + arg["残りターン"]);
+    }
+
+    public static void on籠城戦防御部隊更新後(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on籠城戦防御部隊更新後");
+        デバッグ出力("残りターン" + arg["残りターン"]);
+    }
+
+    public static void on籠城戦ダメージ決定前(引数型 arg, 返値型 ret)
+    {
+        デバッグ出力("on籠城戦ダメージ決定前");
+        デバッグ出力(arg["門防御度"]);
+        ret["門防御度"] = 3;
+    }
+    
     public static void on籠城戦終了時(引数型 arg, 返値型 ret)
     {
         デバッグ出力("on籠城戦終了時");
