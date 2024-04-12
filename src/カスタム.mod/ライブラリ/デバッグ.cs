@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using 将星録;
-using 将星録.野戦;
+﻿using System.Diagnostics;
 
 namespace 将星録;
 

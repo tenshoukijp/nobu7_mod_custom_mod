@@ -1,8 +1,0 @@
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.csproj.AssemblyReference.cache
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.csproj.CoreCompileInputs.cache
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\カスタム.mod.dll
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\カスタム.mod.pdb
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\bin\Release\将星録.mod.dll
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.csproj.Up2Date
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.dll
-C:\Users\master\source\repos\カスタム.mod\カスタム.mod\obj\Release\カスタム.mod.pdb
