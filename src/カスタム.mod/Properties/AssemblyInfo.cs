@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("カスタム.mod")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyCopyright("CC0 ライセンス")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

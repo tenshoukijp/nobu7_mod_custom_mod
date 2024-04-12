@@ -285,9 +285,9 @@ public static partial class カスタム
 
     public static void on籠城戦ダメージ決定時(引数型 arg, 返値型 ret)
     {
-        デバッグ出力("on籠城戦ダメージ決定前");
-        デバッグ出力(arg["門防御度"]);
-        ret["門防御度"] = 3;
+        デバッグ出力("on籠城戦ダメージ決定時");
+        // デバッグ出力(arg["門防御度"]);
+        // ret["門防御度"] = 3;
     }
     
     public static void on籠城戦終了時(引数型 arg, 返値型 ret)
